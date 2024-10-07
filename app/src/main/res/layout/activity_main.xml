@@ -58,6 +58,12 @@
         android:textSize="20sp"
         android:id="@+id/login_btn"/>
 
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
     </LinearLayout>
 
 
