@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Template">
+    tools:context=".Template"
+    tools:ignore="MissingConstraints">
 
     <ImageView
         android:id="@+id/imageView"
@@ -33,5 +34,19 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:srcCompat="@drawable/bottom_nav"
         tools:layout_editor_absoluteX="0dp" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ffffff"
+        android:drawableTop="@drawable/pesan"
+        android:drawableTint="#000000"
+        android:text="Pesan"
+        android:textColor="#B0BEC5"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="809dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
