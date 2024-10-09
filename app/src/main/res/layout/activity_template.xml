@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -35,6 +37,41 @@
         app:srcCompat="@drawable/bottom_nav"
         tools:layout_editor_absoluteX="0dp" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ffffff"
+        android:drawableTop="@drawable/home_button"
+        android:drawableTint="#8C8994"
+        android:text="Beranda"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="-8dp"
+        tools:layout_editor_absoluteY="801dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ffffff"
+        android:drawableTop="@drawable/stoke"
+        android:drawableTint="#8C8994"
+        android:text="Lainnya"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="801dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ffffff"
+        android:drawableTop="@drawable/mortarboard_alt_light"
+        android:drawableTint="#8C8994"
+        android:text="Akademik"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="801dp" />
 
     <Button
         android:id="@+id/button"
@@ -42,11 +79,22 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#ffffff"
         android:drawableTop="@drawable/pesan"
-        android:drawableTint="#000000"
+        android:drawableTint="#8C8994"
         android:text="Pesan"
-        android:textColor="#B0BEC5"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="809dp" />
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="249dp"
+        tools:layout_editor_absoluteY="801dp" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ffffff"
+        android:drawableTop="@drawable/user_cicrle_duotone_line"
+        android:drawableTint="#8C8994"
+        android:text="Akun"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="322dp"
+        tools:layout_editor_absoluteY="801dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
