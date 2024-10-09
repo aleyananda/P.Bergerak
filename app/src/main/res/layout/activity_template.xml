@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -35,6 +37,41 @@
         app:srcCompat="@drawable/bottom_nav"
         tools:layout_editor_absoluteX="0dp" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ffffff"
+        android:drawableTop="@drawable/home_button"
+        android:drawableTint="#8C8994"
+        android:text="Beranda"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="-7dp"
+        tools:layout_editor_absoluteY="805dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ffffff"
+        android:drawableTop="@drawable/stoke"
+        android:drawableTint="#8C8994"
+        android:text="Lainnya"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="805dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ffffff"
+        android:drawableTop="@drawable/mortarboard_alt_light"
+        android:drawableTint="#8C8994"
+        android:text="Akademik"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="805dp" />
 
     <Button
         android:id="@+id/button"
@@ -42,11 +79,122 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#ffffff"
         android:drawableTop="@drawable/pesan"
-        android:drawableTint="#000000"
+        android:drawableTint="#8C8994"
         android:text="Pesan"
-        android:textColor="#B0BEC5"
-        tools:layout_editor_absoluteX="65dp"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="249dp"
         tools:layout_editor_absoluteY="809dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ffffff"
+        android:drawableTop="@drawable/user_cicrle_duotone_line"
+        android:drawableTint="#8C8994"
+        android:text="Akun"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="322dp"
+        tools:layout_editor_absoluteY="805dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/group_163062"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="173dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/group_163062"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="321dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/group_163062"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="466dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/download"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="368dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/download"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="218dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/download"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="512dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Template SPTJM"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="199dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Template Surat Rekomendasi"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="349dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Template SOP"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="493dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Silakan download template dibawah"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="218dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Silakan download template dibawah"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="368dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Silakan download template dibawah"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="512dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
