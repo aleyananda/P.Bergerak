@@ -10,40 +10,12 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".PengajuanSR">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".PengajuanSR"
+        tools:layout_editor_absoluteX="-16dp">
 
         <!-- Header -->
 
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="475dp"
-            android:layout_height="110dp"
-            android:layout_marginTop="272dp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/img"
-            tools:ignore="UnknownIdInLayout" />
-
-        <TextView
-            android:id="@+id/title_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="96dp"
-            android:text="Pengajuan SR"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@id/back_button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/back_button"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="UnknownId" />
 
         <!-- Open Button -->
         <!-- Lebar -->
@@ -52,7 +24,6 @@
         android:background="@drawable/button_background" <!-- Gunakan background rounded -->
         android:alpha="0" <!-- Opacity -->
         android:text="-" />
-
 
 
         <!-- Bottom Nav -->
@@ -69,90 +40,149 @@
 
     ]]>
 
-        <Button
-            android:id="@+id/toggleButton"
-            android:layout_width="315dp"
-            android:layout_height="60dp"
-            tools:layout_editor_absoluteX="39dp"
-            tools:layout_editor_absoluteY="160dp" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="475dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.328"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/img"
+            tools:ignore="UnknownIdInLayout" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="112dp"
+            android:text="Pengajuan SR"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/back_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/back_button"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UnknownId" />
 
         <Button
             android:id="@+id/toggleButton"
             android:layout_width="315dp"
             android:layout_height="60dp"
-            tools:layout_editor_absoluteX="39dp"
-            tools:layout_editor_absoluteY="246dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.406"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.198" />
 
         <Button
             android:id="@+id/toggleButton"
             android:layout_width="315dp"
             android:layout_height="60dp"
-            tools:layout_editor_absoluteX="39dp"
-            tools:layout_editor_absoluteY="325dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.406"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.302" />
 
         <Button
             android:id="@+id/toggleButton"
             android:layout_width="315dp"
             android:layout_height="60dp"
-            tools:layout_editor_absoluteX="39dp"
-            tools:layout_editor_absoluteY="403dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.406"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.397" />
+
+        <Button
+            android:id="@+id/toggleButton"
+            android:layout_width="315dp"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="match_parent"
             android:layout_height="76dp"
-            app:srcCompat="@drawable/bottom_nav"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/bottom_nav" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="804dp"
             android:backgroundTint="#ffffff"
             android:drawableTop="@drawable/home_button"
             android:drawableTint="#8C8994"
             android:text="Beranda"
             android:textColor="#000000"
-            tools:layout_editor_absoluteX="-7dp"
-            tools:layout_editor_absoluteY="805dp" />
+            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="800dp"
             android:backgroundTint="#ffffff"
             android:drawableTop="@drawable/stoke"
             android:drawableTint="#8C8994"
             android:text="Lainnya"
             android:textColor="#000000"
-            tools:layout_editor_absoluteX="70dp"
-            tools:layout_editor_absoluteY="805dp" />
+            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+            app:layout_constraintHorizontal_bias="0.261"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="800dp"
             android:backgroundTint="#ffffff"
             android:drawableTop="@drawable/mortarboard_alt_light"
             android:drawableTint="#8C8994"
             android:text="Akademik"
             android:textColor="#000000"
-            tools:layout_editor_absoluteX="149dp"
-            tools:layout_editor_absoluteY="805dp" />
+            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="808dp"
             android:backgroundTint="#ffffff"
             android:drawableTop="@drawable/pesan"
             android:drawableTint="#8C8994"
             android:text="Pesan"
             android:textColor="#000000"
-            tools:layout_editor_absoluteX="249dp"
-            tools:layout_editor_absoluteY="809dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.77"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button"
@@ -170,9 +200,13 @@
             android:id="@+id/imageButton3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/_button_core"
-            tools:layout_editor_absoluteX="27dp"
-            tools:layout_editor_absoluteY="34dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.078"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.053"
+            app:srcCompat="@drawable/_button_core" />
 
         <TextView
             android:id="@+id/textView9"
@@ -193,8 +227,13 @@
             android:textColor="@color/white"
             android:textSize="28dp"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="82dp"
-            tools:layout_editor_absoluteY="257dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.23"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.305"
+            tools:ignore="DuplicateIds" />
 
         <TextView
             android:id="@+id/textView9"
@@ -204,8 +243,12 @@
             android:textColor="@color/white"
             android:textSize="28dp"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="82dp"
-            tools:layout_editor_absoluteY="336dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.233"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.402" />
 
         <TextView
             android:id="@+id/textView9"
@@ -215,52 +258,74 @@
             android:textColor="@color/white"
             android:textSize="24dp"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="82dp"
-            tools:layout_editor_absoluteY="414dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.347"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
             android:id="@+id/imageButton6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:outlineSpotShadowColor="@color/white"
-            app:srcCompat="@android:drawable/ic_menu_add"
-            tools:layout_editor_absoluteX="281dp"
-            tools:layout_editor_absoluteY="160dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.791"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.203"
+            app:srcCompat="@android:drawable/ic_menu_add" />
 
         <ImageButton
             android:id="@+id/imageButton6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:outlineSpotShadowColor="@color/white"
-            app:srcCompat="@android:drawable/ic_menu_add"
-            tools:layout_editor_absoluteX="281dp"
-            tools:layout_editor_absoluteY="254dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.791"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.309"
+            app:srcCompat="@android:drawable/ic_menu_add" />
 
         <ImageButton
             android:id="@+id/imageButton6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:outlineSpotShadowColor="@color/white"
-            app:srcCompat="@android:drawable/ic_menu_add"
-            tools:layout_editor_absoluteX="281dp"
-            tools:layout_editor_absoluteY="334dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.791"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.405"
+            app:srcCompat="@android:drawable/ic_menu_add" />
 
         <ImageButton
             android:id="@+id/imageButton6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:outlineSpotShadowColor="@color/white"
-            app:srcCompat="@android:drawable/ic_menu_add"
-            tools:layout_editor_absoluteX="281dp"
-            tools:layout_editor_absoluteY="408dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.791"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_add" />
 
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/img_1"
-            tools:layout_editor_absoluteX="249dp"
-            tools:layout_editor_absoluteY="489dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.845"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.588"
+            app:srcCompat="@drawable/img_1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
