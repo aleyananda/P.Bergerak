@@ -7,7 +7,11 @@ import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
 import android.widget.TextView
 
-class ExpandableAdapter(var context: Context, var header: MutableList<String>, var childitem: MutableList<MutableList<String>>) : BaseExpandableListAdapter() {
+class ExpandableAdapter(
+    private val context: Context,
+    private val header: MutableList<String>,
+    private val childitem: MutableList<MutableList<String>>
+) : BaseExpandableListAdapter() {
 
     override fun getGroupCount(): Int {
         return header.size
@@ -45,23 +49,28 @@ class ExpandableAdapter(var context: Context, var header: MutableList<String>, v
             convertView = inflater.inflate(R.layout.list_semester, null)
         }
 
-        // Casting getGroup(p0) to String
-        val itemGroup = convertView!!.findViewById<TextView>(R.id.groupHeader)
-        itemGroup.text = getGroup(p0) as String // Casting to String
-        return convertView
+        convertView?.let {
+            val itemGroup = it.findViewById<TextView>(R.id.groupHeader)
+            itemGroup.text = getGroup(p0) as String
+        }
+
+        return convertView!!
     }
 
     override fun getChildView(p0: Int, p1: Int, p2: Boolean, p3: View?, p4: ViewGroup?): View {
         var convertView = p3
+
         if (convertView == null) {
             val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             convertView = inflater.inflate(R.layout.list_item_smt, null)
         }
 
-        // Casting getChild(p0, p1) to String
-        val childItem = convertView!!.findViewById<TextView>(R.id.childItem)
-        childItem.text = getChild(p0, p1) as String // Casting to String
-        return convertView
+        convertView?.let {
+            val childItem = it.findViewById<TextView>(R.id.childItem)
+            childItem.text = getChild(p0, p1) as String
+        }
+
+        return convertView!!
     }
 
     override fun isChildSelectable(p0: Int, p1: Int): Boolean {
