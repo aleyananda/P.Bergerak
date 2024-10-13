@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Find the button and set the click listener
-        val loginToTemplateButton: Button = findViewById(R.id.logintotemplate)
+        val loginToTemplateButton: Button = findViewById(R.id.loginButton)
         loginToTemplateButton.setOnClickListener {
             // Intent to open TemplateActivity
             val intent = Intent(this@MainActivity, Template::class.java)
