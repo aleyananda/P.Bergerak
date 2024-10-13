@@ -11,11 +11,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Find the button and set the click listener
-        val loginToTemplateButton: Button = findViewById(R.id.logintotemplate)
-        loginToTemplateButton.setOnClickListener {
-            // Intent to open TemplateActivity
-            val intent = Intent(this@MainActivity, Template::class.java)
+        val loginButton = findViewById<Button>(R.id.loginButton)
+        loginButton.setOnClickListener {
+            // Logika login Anda di sini, misalnya validasi user dan password
+
+            // Jika login berhasil, arahkan ke HomeActivity
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
+            finish() // Menutup LoginActivity agar tidak bisa kembali dengan back button
         }
     }
 }
