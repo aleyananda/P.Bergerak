@@ -308,6 +308,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="421dp"
+        android:layout_height="94dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/bottom_nav" />
+
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
@@ -317,8 +329,12 @@
         android:drawableTint="#8C8994"
         android:text="Beranda"
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="-7dp"
-        tools:layout_editor_absoluteY="805dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -330,8 +346,12 @@
         android:drawableTint="#8C8994"
         android:text="Lainnya"
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="805dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="DuplicateIds,MissingConstraints" />
 
     <Button
@@ -343,8 +363,12 @@
         android:drawableTint="#8C8994"
         android:text="Akademik"
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="805dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -356,8 +380,12 @@
         android:drawableTint="#8C8994"
         android:text="Pesan"
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="249dp"
-        tools:layout_editor_absoluteY="809dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.789"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -369,8 +397,12 @@
         android:drawableTint="#8C8994"
         android:text="Akun"
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="322dp"
-        tools:layout_editor_absoluteY="805dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toTopOf="@+id/button4"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
     <ImageButton
