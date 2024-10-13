@@ -12,7 +12,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="79dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +20,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="59dp"
+            android:layout_height="79dp"
             android:background="#FFFFFF">
 
             <TextView
@@ -38,8 +38,8 @@
 
             <ImageButton
                 android:id="@+id/imageButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:background="#FEFEFE"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +47,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.466"
-                app:srcCompat="@drawable/_button_core" />
+                app:srcCompat="@drawable/_button_core"
+                android:contentDescription="Kembali" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -64,7 +66,7 @@
             android:id="@+id/toolbarProfileRL"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:layout_marginVertical="130dp"
+            android:layout_marginVertical="110dp"
             android:layout_centerHorizontal="true">
 
             <com.google.android.material.imageview.ShapeableImageView
@@ -82,7 +84,7 @@
         android:id="@+id/RL1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="250dp"
+        android:layout_marginVertical="230dp"
         android:layout_centerHorizontal="true">
 
 
@@ -109,19 +111,18 @@
             android:textSize="8sp"
             android:textStyle="bold" />
 
-        <ImageButton
-            android:id="@+id/imageButton1"
-            android:layout_width="48dp"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonChoose"
+            android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="132dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="127dp"
-            android:background="#FEFEFE"
-            android:scaleType="fitCenter"
-            android:src="@drawable/img" />
+            android:layout_marginStart="145dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="145dp"
+            android:background="@drawable/choosebtn"
+            android:text="Choose File" />
 
     </RelativeLayout>
 
@@ -239,9 +240,9 @@
         android:layout_below="@+id/phoneInputRL"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="157dp"
+        android:layout_marginTop="145dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="6dp"
+        android:layout_marginBottom="0dp"
         app:srcCompat="@drawable/bottom_nav" />
 
     <Button
@@ -251,7 +252,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="-7dp"
-        android:layout_marginBottom="-1dp"
+        android:layout_marginBottom="0dp"
         android:backgroundTint="#ffffff"
         android:drawableTop="@drawable/home_button"
         android:drawableTint="#8C8994"
@@ -326,18 +327,18 @@
         tools:layout_editor_absoluteX="322dp"
         tools:layout_editor_absoluteY="805dp" />
 
-    <Button
-        android:id="@+id/button8"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="300dp"
-        android:layout_marginTop="725dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="718dp"
         android:layout_marginEnd="23dp"
-        android:layout_marginBottom="93dp"
+        android:layout_marginBottom="97dp"
         android:background="@drawable/savebtn"
         android:text="Save" />
 
