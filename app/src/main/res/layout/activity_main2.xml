@@ -47,7 +47,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.466"
-                app:srcCompat="@drawable/_button_core" />
+                app:srcCompat="@drawable/_button_core"
+                android:contentDescription="Kembali" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -333,8 +335,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="290dp"
-        android:layout_marginTop="725dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="718dp"
         android:layout_marginEnd="23dp"
         android:layout_marginBottom="97dp"
         android:background="@drawable/savebtn"
