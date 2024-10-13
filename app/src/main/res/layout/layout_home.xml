@@ -125,11 +125,11 @@ Jurusan : Sistem Informasi \n Angkatan  : 2022 \n Semester  : 4"
                 app:layout_constraintTop_toTopOf="@+id/imageView9" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/editbutton"
                 android:layout_width="88dp"
                 android:layout_height="48dp"
                 android:text="Edit"
-                android:textSize="9dp"
+                android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView9"
                 app:layout_constraintEnd_toEndOf="@+id/imageView9"
                 app:layout_constraintHorizontal_bias="0.905"
