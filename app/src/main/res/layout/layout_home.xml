@@ -141,11 +141,11 @@ Jurusan : Sistem Informasi \n Angkatan  : 2022 \n Semester  : 4"
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="123dp">
+            android:layout_height="155dp">
 
             <LinearLayout
-                android:layout_width="409dp"
-                android:layout_height="100dp"
+                android:layout_width="412dp"
+                android:layout_height="150dp"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -154,34 +154,26 @@ Jurusan : Sistem Informasi \n Angkatan  : 2022 \n Semester  : 4"
 
                 <ImageButton
                     android:id="@+id/srbutton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
                     android:layout_weight="2"
                     android:background="#FEFAFD"
                     app:srcCompat="@drawable/img2" />
 
                 <ImageButton
                     android:id="@+id/sptjmbutton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
                     android:layout_weight="2"
                     android:background="#FEFAFD"
                     app:srcCompat="@drawable/img3" />
-
-                <ImageButton
-                    android:id="@+id/konversibutton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:background="#FEFAFD"
-                    app:srcCompat="@drawable/img4" />
 
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="114dp">
+            android:layout_height="150dp">
 
             <LinearLayout
                 android:layout_width="409dp"
@@ -195,16 +187,16 @@ Jurusan : Sistem Informasi \n Angkatan  : 2022 \n Semester  : 4"
 
                 <ImageButton
                     android:id="@+id/templatebutton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
                     android:layout_weight="2"
                     android:background="#FDF9FC"
                     app:srcCompat="@drawable/img5" />
 
                 <ImageButton
                     android:id="@+id/hasilbutton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="150dp"
                     android:layout_weight="2"
                     android:background="#FDF9FC"
                     app:srcCompat="@drawable/img6" />
@@ -213,20 +205,17 @@ Jurusan : Sistem Informasi \n Angkatan  : 2022 \n Semester  : 4"
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="220dp">
+            android:layout_height="225dp">
 
             <ImageView
                 android:id="@+id/imageView20"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="200dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/img9" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>

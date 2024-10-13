@@ -26,6 +26,18 @@ class HomeActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity2::class.java)
             startActivity(intent)
         }
+        val hometosr: ImageButton = findViewById(R.id.srbutton)
+        hometosr.setOnClickListener {
+            // Intent to open HomeActivity
+            val intent = Intent(this@HomeActivity, pengajuansr::class.java)
+            startActivity(intent)
+        }
+        val hometosptjm: ImageButton = findViewById(R.id.sptjmbutton)
+        hometosptjm.setOnClickListener {
+            // Intent to open HomeActivity
+            val intent = Intent(this@HomeActivity, pengajuansr::class.java)
+            startActivity(intent)
+        }
         val hometotemplatebutton: ImageButton = findViewById(R.id.templatebutton)
         hometotemplatebutton.setOnClickListener {
             // Intent to open HomeActivity
