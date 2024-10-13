@@ -26,6 +26,12 @@ class HomeActivity : AppCompatActivity() {
             val intent = Intent(this@HomeActivity, Template::class.java)
             startActivity(intent)
         }
+        val hometoresult: ImageButton = findViewById(R.id.hasilbutton)
+        hometoresult.setOnClickListener {
+            // Intent to open HomeActivity
+            val intent = Intent(this@HomeActivity, Result::class.java)
+            startActivity(intent)
+        }
     }
 }
 
