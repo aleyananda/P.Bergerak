@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         val loginToTemplateButton: Button = findViewById(R.id.loginButton)
         loginToTemplateButton.setOnClickListener {
             // Intent to open TemplateActivity
-            val intent = Intent(this@MainActivity, Template::class.java)
+            val intent = Intent(this@MainActivity, HomeActivity::class.java)
             startActivity(intent)
         }
     }
