@@ -16,6 +16,9 @@
             android:name=".Result"
             android:exported="false" />
         <activity
+            android:name=".Pengajuansptjm"
+            android:exported="false" />
+        <activity
             android:name=".Template"
             android:exported="false" />
         <activity
