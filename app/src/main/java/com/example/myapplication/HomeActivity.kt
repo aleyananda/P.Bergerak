@@ -20,7 +20,7 @@ class HomeActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val hometoedit = findViewById<Button>(R.id.editbutton)
+        val hometoedit: Button = findViewById(R.id.editbutton)
         hometoedit.setOnClickListener {
             // Membuat intent untuk berpindah ke edit
             val intent = Intent(this, MainActivity2::class.java)
