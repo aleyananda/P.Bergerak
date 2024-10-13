@@ -19,7 +19,7 @@
             android:name=".Result"
             android:exported="false" />
         <activity
-            android:name=".Pengajuansptjm"
+            android:name=".Homescreen"
             android:exported="false" />
         <activity
             android:name=".Template"
