@@ -16,6 +16,9 @@
             android:name=".pengajuansr"
             android:exported="false" />
         <activity
+            android:name=".pengajuansptjm"
+            android:exported="false" />
+        <activity
             android:name=".Result"
             android:exported="false" />
         <activity
