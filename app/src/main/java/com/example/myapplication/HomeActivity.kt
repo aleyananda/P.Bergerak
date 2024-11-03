@@ -23,7 +23,7 @@ class HomeActivity : AppCompatActivity() {
         val hometoedit: Button = findViewById(R.id.editbutton)
         hometoedit.setOnClickListener {
             // Membuat intent untuk berpindah ke edit
-            val intent = Intent(this, MainActivity2::class.java)
+            val intent = Intent(this, editprofile::class.java)
             startActivity(intent)
         }
         val logout: ImageButton = findViewById(R.id.Logoutbutton)

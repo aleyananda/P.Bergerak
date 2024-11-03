@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2">
+    tools:context=".editprofile">
 
 
     <!--LinearLayout: Toolbar-->
@@ -61,22 +61,22 @@
 
     </LinearLayout>
 
-        <!--RelativeLayout: Profile Image, Pick Image for Profile-->
+    <!--RelativeLayout: Profile Image, Pick Image for Profile-->
     <RelativeLayout
-            android:id="@+id/toolbarProfileRL"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginVertical="110dp"
-            android:layout_centerHorizontal="true">
+        android:id="@+id/toolbarProfileRL"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginVertical="110dp"
+        android:layout_centerHorizontal="true">
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/ProfileIv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/img8"
-                app:strokeWidth="3dp"
-                app:strokeColor="#A3A3A3"
-                android:scaleType="centerCrop"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ProfileIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img8"
+            app:strokeWidth="3dp"
+            app:strokeColor="#A3A3A3"
+            android:scaleType="centerCrop"/>
 
     </RelativeLayout>
 
@@ -126,19 +126,21 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
-
+    <LinearLayout
         android:id="@+id/phoneInputRL"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:layout_height="414dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="300dp"
+        android:layout_marginBottom="152dp"
+        android:orientation="vertical"
+        android:padding="15dp">
 
-    <!--TextInputLayout: Input Name-->
+        <!-- TextInputLayout: Input Name -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="300dp"
             android:hint="Nama"
             app:boxCornerRadiusBottomEnd="8dp"
             app:boxCornerRadiusBottomStart="8dp"
@@ -149,17 +151,14 @@
                 android:id="@+id/nameEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:baselineAligned="false"
                 android:inputType="textPersonName|textCapWords" />
-
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!--TextInputLayout: Input NIM-->
+        <!-- TextInputLayout: Input NIM -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nim"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/name"
             android:hint="NIM"
             app:boxCornerRadiusBottomEnd="8dp"
             app:boxCornerRadiusBottomStart="8dp"
@@ -171,15 +170,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number" />
-
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!--TextInputLayout: Input Jurusan-->
+        <!-- TextInputLayout: Input Jurusan -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/jurusan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/nim"
             android:hint="Jurusan"
             app:boxCornerRadiusBottomEnd="8dp"
             app:boxCornerRadiusBottomStart="8dp"
@@ -191,15 +188,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName|textCapWords" />
-
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!--TextInputLayout: Input Angkatan-->
+        <!-- TextInputLayout: Input Angkatan -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/angkatan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/jurusan"
             android:hint="Angkatan"
             app:boxCornerRadiusBottomEnd="8dp"
             app:boxCornerRadiusBottomStart="8dp"
@@ -211,121 +206,132 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number" />
-
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!--TextInputLayout: Input Semester-->
-        <!-- Input Semester -->
-        <com.google.android.material.textfield.TextInputLayout
+        <!-- TextInputLayout: Input Semester -->
+        <LinearLayout
             android:id="@+id/semester"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/angkatan"
-            android:hint="Semester">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:focusableInTouchMode="true"
+            tools:context=".editprofile">
 
-            <EditText
-                android:id="@+id/semesterEt"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_margin="0dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp">
 
-    </RelativeLayout>
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/item_label"
+                    android:inputType="none"
+                    />
 
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <ImageView
-        android:id="@+id/bottomNav"
-        android:layout_width="match_parent"
-        android:layout_height="76dp"
-        android:layout_below="@+id/phoneInputRL"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="145dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="0dp"
-        app:srcCompat="@drawable/bottom_nav" />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/button1"
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:layout_height="79dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="-7dp"
+        android:layout_marginTop="787dp"
         android:layout_marginBottom="0dp"
-        android:backgroundTint="#ffffff"
-        android:drawableTop="@drawable/home_button"
-        android:drawableTint="#8C8994"
-        android:text="Beranda"
-        android:textColor="#000000"
-        tools:layout_editor_absoluteX="-7dp"
-        tools:layout_editor_absoluteY="805dp" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="237dp"
-        android:layout_marginBottom="0dp"
-        android:backgroundTint="#ffffff"
-        android:drawableTop="@drawable/stoke"
-        android:drawableTint="#8C8994"
-        android:text="Lainnya"
-        android:textColor="#000000"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="805dp" />
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="#ffffff"
+            android:drawableTop="@drawable/home_button"
+            android:drawableTint="#8C8994"
+            android:text="Beranda"
+            android:textColor="#000000"
+            tools:layout_editor_absoluteX="-7dp"
+            tools:layout_editor_absoluteY="805dp" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="160dp"
-        android:layout_marginEnd="139dp"
-        android:layout_marginBottom="0dp"
-        android:backgroundTint="#ffffff"
-        android:drawableTop="@drawable/mortarboard_alt_light"
-        android:drawableTint="#8C8994"
-        android:text="Akademik"
-        android:textColor="#000000"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="805dp" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-20dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="#ffffff"
+            android:drawableTop="@drawable/stoke"
+            android:drawableTint="#8C8994"
+            android:text="Lainnya"
+            android:textColor="#000000"
+            tools:layout_editor_absoluteX="70dp"
+            tools:layout_editor_absoluteY="805dp" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="66dp"
-        android:layout_marginBottom="0dp"
-        android:backgroundTint="#ffffff"
-        android:drawableTop="@drawable/pesan"
-        android:drawableTint="#8C8994"
-        android:text="Pesan"
-        android:textColor="#000000"
-        tools:layout_editor_absoluteX="249dp"
-        tools:layout_editor_absoluteY="809dp" />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-20dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="#ffffff"
+            android:drawableTop="@drawable/mortarboard_alt_light"
+            android:drawableTint="#8C8994"
+            android:text="Akademik"
+            android:textColor="#000000"
+            tools:layout_editor_absoluteX="149dp"
+            tools:layout_editor_absoluteY="805dp" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="325dp"
-        android:layout_marginBottom="0dp"
-        android:backgroundTint="#ffffff"
-        android:drawableTop="@drawable/user_cicrle_duotone_line"
-        android:drawableTint="#8C8994"
-        android:text="Akun"
-        android:textColor="#000000"
-        tools:layout_editor_absoluteX="322dp"
-        tools:layout_editor_absoluteY="805dp" />
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-20dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="#ffffff"
+            android:drawableTop="@drawable/pesan"
+            android:drawableTint="#8C8994"
+            android:text="Pesan"
+            android:textColor="#000000"
+            tools:layout_editor_absoluteX="249dp"
+            tools:layout_editor_absoluteY="809dp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-20dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="#ffffff"
+            android:drawableTop="@drawable/user_cicrle_duotone_line"
+            android:drawableTint="#8C8994"
+            android:text="Akun"
+            android:textColor="#000000"
+            tools:layout_editor_absoluteX="322dp"
+            tools:layout_editor_absoluteY="805dp" />
+
+    </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonSave"
@@ -336,9 +342,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="260dp"
-        android:layout_marginTop="718dp"
+        android:layout_marginTop="700dp"
         android:layout_marginEnd="23dp"
-        android:layout_marginBottom="97dp"
+        android:layout_marginBottom="110dp"
         android:background="@drawable/savebtn"
         android:text="Save" />
 

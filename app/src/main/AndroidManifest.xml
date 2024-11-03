@@ -31,7 +31,7 @@
             android:name=".HomeActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".editprofile"
             android:exported="true"/>
         <activity
             android:name=".MainActivity"
