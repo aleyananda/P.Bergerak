@@ -129,10 +129,12 @@
     <LinearLayout
         android:id="@+id/phoneInputRL"
         android:layout_width="match_parent"
-        android:layout_height="414dp"
+        android:layout_height="349dp"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="300dp"
-        android:layout_marginBottom="152dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="197dp"
         android:orientation="vertical"
         android:padding="15dp">
 
@@ -211,10 +213,10 @@
         <!-- TextInputLayout: Input Semester -->
         <LinearLayout
             android:id="@+id/semester"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
             android:focusableInTouchMode="true"
+            android:orientation="vertical"
             tools:context=".editprofile">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -232,8 +234,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/item_label"
-                    android:inputType="none"
-                    />
+                    android:inputType="none" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -342,9 +343,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="260dp"
-        android:layout_marginTop="700dp"
+        android:layout_marginTop="690dp"
         android:layout_marginEnd="23dp"
-        android:layout_marginBottom="110dp"
+        android:layout_marginBottom="120dp"
         android:background="@drawable/savebtn"
         android:text="Save" />
 

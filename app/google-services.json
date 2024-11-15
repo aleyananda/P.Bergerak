@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "552777172466",
+    "project_id": "msibapp-968a5",
+    "storage_bucket": "msibapp-968a5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:552777172466:android:cffbacaef33782d795976b",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhB6gspY-x3IdBL_3af5qbl2kI4CkJZ9M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
