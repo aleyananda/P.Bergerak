@@ -28,7 +28,7 @@ class Homescreen : AppCompatActivity() {
         val homeToMainButton: ImageButton = findViewById(R.id.hometomain)
         homeToMainButton.setOnClickListener {
             // Intent to open MainActivity
-            val intent = Intent(this@Homescreen, MainActivity::class.java)
+            val intent = Intent(this@Homescreen, Register::class.java)
             startActivity(intent)
         }
     }

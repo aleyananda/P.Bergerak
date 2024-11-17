@@ -43,7 +43,7 @@
         tools:layout_editor_absoluteX="0dp" />
 
     <Button
-        android:id="@+id/btn_home"
+        android:id="@+id/btn_homeT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#ffffff"
@@ -59,7 +59,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_lainnyaT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#ffffff"
@@ -75,7 +75,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_akademikT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#ffffff"
@@ -91,7 +91,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_pesanT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#ffffff"
@@ -107,7 +107,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_akunT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#ffffff"
@@ -123,7 +123,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageViewT2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -135,7 +135,7 @@
         app:srcCompat="@drawable/group_163062" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageViewT3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -147,7 +147,7 @@
         app:srcCompat="@drawable/group_163062" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageViewT4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -159,7 +159,7 @@
         app:srcCompat="@drawable/group_163062" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewT5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -171,7 +171,7 @@
         app:srcCompat="@drawable/download" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewT6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -183,7 +183,7 @@
         app:srcCompat="@drawable/download" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewT7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -195,7 +195,7 @@
         app:srcCompat="@drawable/download" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewT8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Template SPTJM"
@@ -208,7 +208,7 @@
         app:layout_constraintVertical_bias="0.234" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewT9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Template Surat Rekomendasi"
@@ -221,7 +221,7 @@
         app:layout_constraintVertical_bias="0.412" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewT10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Template SOP"
@@ -234,7 +234,7 @@
         app:layout_constraintVertical_bias="0.582" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewT11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Silakan download template dibawah"
@@ -246,7 +246,7 @@
         app:layout_constraintVertical_bias="0.257" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewT12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Silakan download template dibawah"
@@ -258,7 +258,7 @@
         app:layout_constraintVertical_bias="0.434" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewT13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Silakan download template dibawah"

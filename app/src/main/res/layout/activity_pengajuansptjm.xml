@@ -76,7 +76,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView45"
+        android:id="@+id/textView55"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Surat Pengantar"
@@ -180,7 +180,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView35"
+        android:id="@+id/textView65"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="KSM"
@@ -300,7 +300,7 @@
 
     <!--- Bottom Nav -->
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageViewA"
         android:layout_width="match_parent"
         android:layout_height="76dp"
         app:srcCompat="@drawable/bottom_nav"

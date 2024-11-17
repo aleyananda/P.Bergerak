@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
             android:name=".pengajuansr"
             android:exported="false" />
         <activity
@@ -22,8 +25,8 @@
             android:name=".Result"
             android:exported="false" />
         <activity
-            android:name=".Homescreen"
-            android:exported="false" />
+            android:name=".Register"
+            android:exported="true" />
         <activity
             android:name=".Template"
             android:exported="false" />
@@ -32,9 +35,9 @@
             android:exported="true" />
         <activity
             android:name=".editprofile"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Homescreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
