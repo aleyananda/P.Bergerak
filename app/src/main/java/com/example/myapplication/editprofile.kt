@@ -52,14 +52,6 @@ class editprofile : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Button to open HomeActivity
-        val button = findViewById<Button>(R.id.button1)
-        button.setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
-        }
-
-
         btnChoose = findViewById(R.id.buttonChoose)
         btnSave = findViewById(R.id.buttonSave)
         ProfileIv = findViewById(R.id.ProfileIv)

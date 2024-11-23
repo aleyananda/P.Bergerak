@@ -1,531 +1,453 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
+    android:id="@+id/sr"
     android:layout_height="match_parent"
-    tools:context=".pengajuansr"
-    tools:ignore="ExtraText">
+    tools:context=".pengajuansr">
 
-    <!-- Header -->
+    <!-- Bagian atas yang tetap -->
+    <LinearLayout
+        android:id="@+id/linearLayoutEPSR"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:orientation="vertical">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
+            android:background="#FFFFFF">
 
-    <ImageView
-        android:id="@+id/imageView43"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/rectangle2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.524"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.823" />
+            <TextView
+                android:id="@+id/EditProfilTVSR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pengajuan SR"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.511" />
 
-    <ImageButton
-        android:id="@+id/imageButton49"
-        android:layout_width="90dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="672dp"
-        android:src="@drawable/button_upload"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.647"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            <ImageButton
+                android:id="@+id/btnBackSR"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#FEFEFE"
+                android:contentDescription="@string/back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.043"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.466"
+                app:srcCompat="@drawable/_button_core" />
 
-    <ImageView
-        android:id="@+id/imageView45"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/rectangle"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.715" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
-        android:id="@+id/imageView41"
-        android:layout_width="186dp"
-        android:layout_height="82dp"
-        android:layout_marginTop="632dp"
-        android:src="@drawable/img_5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@+id/dividerSR"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="?android:attr/listDivider" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView44"
-        android:layout_width="80dp"
-        android:layout_height="18dp"
-        android:layout_gravity="bottom"
-        android:layout_marginTop="680dp"
-        android:gravity="center"
-        android:text="Choose File"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        android:textStyle=""
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.637"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!-- Bagian konten yang dapat di-scroll -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        android:layout_marginTop="100dp"> <!-- Tambahkan marginTop agar tidak menutupi bagian tetap -->
 
-    <TextView
-        android:id="@+id/textView45"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Surat Pengantar"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.315"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.71" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/imageView40"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
-        android:src="@drawable/minimize"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.836"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.699" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/imageView33"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/rectangle2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.524"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.611" />
+                <ImageView
+                    android:id="@+id/imageView14sr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rectangle"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView1sr"
+                    app:layout_constraintEnd_toEndOf="@id/guideline3sr"
+                    app:layout_constraintStart_toStartOf="@id/guideline2sr"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
 
+                <TextView
+                    android:id="@+id/textView1sr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SOP"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView14sr"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView14sr"
+                    app:layout_constraintHorizontal_bias="0.095"
+                    app:layout_constraintStart_toStartOf="@+id/imageView14sr"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView14sr"
+                    app:layout_constraintVertical_bias="0.5" />
 
-    <ImageView
-        android:id="@+id/imageView35"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/rectangle"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.525" />
+                <ImageView
+                    android:id="@+id/imageView1sr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rectangle2"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView15sr"
+                    app:layout_constraintEnd_toEndOf="@id/guideline3sr"
+                    app:layout_constraintStart_toStartOf="@id/guideline2sr"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView14sr"
+                    app:layout_constraintTop_toTopOf="@+id/imageView14sr" />
 
-    <ImageView
-        android:id="@+id/imageView30"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
-        android:src="@drawable/minimize"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.836"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.507" />
+                <ImageView
+                    android:id="@+id/imageView26sr"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="28dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView1sr"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView1sr"
+                    app:layout_constraintHorizontal_bias="0.2"
+                    app:layout_constraintStart_toStartOf="@+id/imageView1sr"
+                    app:layout_constraintTop_toTopOf="@+id/imageView1sr"
+                    app:layout_constraintVertical_bias="0.2"
+                    app:srcCompat="@drawable/pdf_file"
+                    app:tint="@color/black" />
 
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/uploadBtnsr"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="98dp"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="2dp"
+                    android:backgroundTint="@color/garisabu"
+                    android:elevation="8dp"
+                    android:text="Choose File"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/fileName1sr"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView1sr"
+                    app:layout_constraintHorizontal_bias="0.717"
+                    app:layout_constraintStart_toStartOf="@+id/imageView26sr"
+                    app:layout_constraintTop_toTopOf="@+id/imageView1sr"
+                    app:layout_constraintVertical_bias="1.0" />
 
-    <ImageButton
-        android:id="@+id/imageButton39"
-        android:layout_width="90dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="520dp"
-        android:src="@drawable/button_upload"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.647"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                <TextView
+                    android:id="@+id/fileName1sr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:paddingHorizontal="24dp"
+                    android:text="No file chosen"
+                    android:textColor="@color/abufile"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView1sr"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView1sr"
+                    app:layout_constraintHorizontal_bias="0.831"
+                    app:layout_constraintStart_toStartOf="@+id/imageView1sr"
+                    app:layout_constraintVertical_bias="1.0" />
 
-    <TextView
-        android:id="@+id/textView34"
-        android:layout_width="80dp"
-        android:layout_height="18dp"
-        android:layout_gravity="bottom"
-        android:layout_marginTop="528dp"
-        android:gravity="center"
-        android:text="Choose File"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        android:textStyle=""
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.637"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+                <ImageView
+                    android:id="@+id/imageView15sr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rectangle"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView2sr"
+                    app:layout_constraintEnd_toEndOf="@id/guideline3sr"
+                    app:layout_constraintStart_toStartOf="@id/guideline2sr"
+                    app:layout_constraintTop_toBottomOf="@id/imageView1sr"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2sr" />
 
-    <ImageView
-        android:id="@+id/imageView31"
-        android:layout_width="186dp"
-        android:layout_height="82dp"
-        android:layout_marginTop="480dp"
-        android:src="@drawable/img_5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/textView25sr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KHS"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView15sr"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView15sr"
+                    app:layout_constraintHorizontal_bias="0.095"
+                    app:layout_constraintStart_toStartOf="@+id/imageView15sr"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView15sr"
+                    app:layout_constraintVertical_bias="0.5" />
 
-    <TextView
-        android:id="@+id/textView35"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="KSM"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.202"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.524" />
+                <ImageView
+                    android:id="@+id/imageView2sr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rectangle2"
+                    android:layout_marginBottom="40dp"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView35sr"
+                    app:layout_constraintEnd_toEndOf="@id/guideline3sr"
+                    app:layout_constraintStart_toStartOf="@id/guideline2sr"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView15sr" />
 
-    <ImageView
-        android:id="@+id/imageView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/rectangle2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.407" />
+                <ImageView
+                    android:id="@+id/imageview21sr"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="28dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView2sr"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView2sr"
+                    app:layout_constraintHorizontal_bias="0.2"
+                    app:layout_constraintStart_toStartOf="@+id/imageView2sr"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2sr"
+                    app:layout_constraintVertical_bias="0.2"
+                    app:srcCompat="@drawable/pdf_file"
+                    app:tint="@color/black" />
 
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/rectangle"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.34" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/uploadBtn2sr"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="94dp"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="2dp"
+                    android:backgroundTint="@color/garisabu"
+                    android:elevation="8dp"
+                    android:text="Choose File"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/fileName2sr"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView2sr"
+                    app:layout_constraintHorizontal_bias="0.717"
+                    app:layout_constraintStart_toStartOf="@+id/imageview21sr"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2sr"
+                    app:layout_constraintVertical_bias="1.0" />
 
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="KHS"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.196"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.34" />
+                <TextView
+                    android:id="@+id/fileName2sr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:paddingHorizontal="24dp"
+                    android:text="No file chosen"
+                    android:textColor="@color/abufile"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView2sr"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView2sr"
+                    app:layout_constraintHorizontal_bias="0.831"
+                    app:layout_constraintStart_toStartOf="@+id/imageView2sr"
+                    app:layout_constraintVertical_bias="1.0" />
 
-    <ImageButton
-        android:id="@+id/imageButton7"
-        android:layout_width="90dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="368dp"
-        android:src="@drawable/button_upload"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.641"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                <ImageView
+                    android:id="@+id/imageView35sr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rectangle"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView3sr"
+                    app:layout_constraintEnd_toEndOf="@id/guideline3sr"
+                    app:layout_constraintStart_toStartOf="@id/guideline2sr"
+                    app:layout_constraintTop_toBottomOf="@id/imageView2sr"
+                    app:layout_constraintTop_toTopOf="@id/imageView3sr" />
 
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="80dp"
-        android:layout_height="18dp"
-        android:layout_gravity="bottom"
-        android:layout_marginTop="376dp"
-        android:gravity="center"
-        android:text="Choose File"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        android:textStyle=""
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.631"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+                <TextView
+                    android:id="@+id/textView65sr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KSM"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView35sr"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView35sr"
+                    app:layout_constraintHorizontal_bias="0.095"
+                    app:layout_constraintStart_toStartOf="@+id/imageView35sr"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView35sr"
+                    app:layout_constraintVertical_bias="0.5" />
 
-    <ImageView
-        android:id="@+id/imageView21"
-        android:layout_width="186dp"
-        android:layout_height="82dp"
-        android:layout_marginTop="328dp"
-        android:src="@drawable/img_5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/imageView3sr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rectangle2"
+                    android:layout_marginBottom="40dp"
+                    app:layout_constraintBottom_toTopOf="@id/imageView45sr"
+                    app:layout_constraintEnd_toEndOf="@id/guideline3sr"
+                    app:layout_constraintStart_toStartOf="@id/guideline2sr"
+                    app:layout_constraintTop_toBottomOf="@id/imageView35sr" />
 
-    <ImageView
-        android:id="@+id/imageView20"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
-        android:src="@drawable/minimize"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.831"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.321" />
+                <ImageView
+                    android:id="@+id/imageview31sr"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="28dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView3sr"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView3sr"
+                    app:layout_constraintHorizontal_bias="0.2"
+                    app:layout_constraintStart_toStartOf="@+id/imageView3sr"
+                    app:layout_constraintTop_toTopOf="@+id/imageView3sr"
+                    app:layout_constraintVertical_bias="0.2"
+                    app:srcCompat="@drawable/pdf_file"
+                    app:tint="@color/black" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="475dp"
-        android:layout_height="110dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="UnknownIdInLayout" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/uploadBtn3sr"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="94dp"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="2dp"
+                    android:backgroundTint="@color/garisabu"
+                    android:elevation="8dp"
+                    android:text="Choose File"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/fileName3sr"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView3sr"
+                    app:layout_constraintHorizontal_bias="0.717"
+                    app:layout_constraintStart_toStartOf="@+id/imageview31sr"
+                    app:layout_constraintTop_toTopOf="@+id/imageView3sr"
+                    app:layout_constraintVertical_bias="1.0" />
 
+                <TextView
+                    android:id="@+id/fileName3sr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:paddingHorizontal="24dp"
+                    android:text="No file chosen"
+                    android:textColor="@color/abufile"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView3sr"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView3sr"
+                    app:layout_constraintHorizontal_bias="0.831"
+                    app:layout_constraintStart_toStartOf="@+id/imageView3sr"
+                    app:layout_constraintVertical_bias="1.0" />
 
-    <!-- Button Upload -->
+                <ImageView
+                    android:id="@+id/imageView45sr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rectangle"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView4sr"
+                    app:layout_constraintEnd_toEndOf="@id/guideline3sr"
+                    app:layout_constraintStart_toStartOf="@id/guideline2sr"
+                    app:layout_constraintTop_toTopOf="@id/imageView4sr"
+                    app:layout_constraintTop_toBottomOf="@id/imageView3sr"/>
 
+                <TextView
+                    android:id="@+id/textView55sr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Surat Pengantar"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView45sr"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView45sr"
+                    app:layout_constraintHorizontal_bias="0.19"
+                    app:layout_constraintStart_toStartOf="@+id/imageView45sr"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView45sr"
+                    app:layout_constraintVertical_bias="0.5" />
 
-    <!--- Bottom Nav -->
+                <ImageView
+                    android:id="@+id/imageView4sr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rectangle2"
+                    android:layout_marginBottom="40dp"
+                    app:layout_constraintBottom_toTopOf="@+id/uploadBtn5sr"
+                    app:layout_constraintEnd_toEndOf="@id/guideline3sr"
+                    app:layout_constraintStart_toStartOf="@id/guideline2sr"
+                    app:layout_constraintTop_toBottomOf="@id/imageView45sr" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="421dp"
-        android:layout_height="94dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/bottom_nav" />
+                <ImageView
+                    android:id="@+id/imageview41sr"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="28dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView4sr"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView4sr"
+                    app:layout_constraintHorizontal_bias="0.2"
+                    app:layout_constraintStart_toStartOf="@+id/imageView4sr"
+                    app:layout_constraintTop_toTopOf="@+id/imageView4sr"
+                    app:layout_constraintVertical_bias="0.2"
+                    app:srcCompat="@drawable/pdf_file"
+                    app:tint="@color/black" />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#ffffff"
-        android:drawableTop="@drawable/home_button"
-        android:drawableTint="#8C8994"
-        android:text="Beranda"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/uploadBtn4sr"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="94dp"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="2dp"
+                    android:backgroundTint="@color/garisabu"
+                    android:elevation="8dp"
+                    android:text="Choose File"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/fileName4sr"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView4sr"
+                    app:layout_constraintHorizontal_bias="0.717"
+                    app:layout_constraintStart_toStartOf="@+id/imageview41sr"
+                    app:layout_constraintTop_toTopOf="@+id/imageView4sr"
+                    app:layout_constraintVertical_bias="1.0" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#ffffff"
-        android:drawableTop="@drawable/stoke"
-        android:drawableTint="#8C8994"
-        android:text="Lainnya"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.26"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="DuplicateIds,MissingConstraints" />
+                <TextView
+                    android:id="@+id/fileName4sr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:paddingHorizontal="24dp"
+                    android:text="No file chosen"
+                    android:textColor="@color/abufile"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView4sr"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView4sr"
+                    app:layout_constraintHorizontal_bias="0.831"
+                    app:layout_constraintStart_toStartOf="@+id/imageView4sr"
+                    app:layout_constraintVertical_bias="1.0" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#ffffff"
-        android:drawableTop="@drawable/mortarboard_alt_light"
-        android:drawableTint="#8C8994"
-        android:text="Akademik"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.535"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints" />
+                <!--- Button Save Off-->
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#ffffff"
-        android:drawableTop="@drawable/pesan"
-        android:drawableTint="#8C8994"
-        android:text="Pesan"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.789"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/uploadBtn5sr"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="94dp"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="80dp"
+                    android:backgroundTint="@color/navy"
+                    android:elevation="5dp"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintTop_toBottomOf="@id/imageView4sr"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/guideline3sr"
+                    app:layout_constraintStart_toStartOf="@id/guideline2sr" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#ffffff"
-        android:drawableTop="@drawable/user_cicrle_duotone_line"
-        android:drawableTint="#8C8994"
-        android:text="Akun"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toTopOf="@+id/button4"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2sr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="49dp" />
 
-    <ImageButton
-        android:id="@+id/btnBackSR"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.033"
-        app:srcCompat="@drawable/_button_core"
-        tools:ignore="SpeakableTextPresentCheck" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline3sr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.88" />
 
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!--- Button Save Off-->
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.845"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.912"
-        app:srcCompat="@drawable/img_1" />
-
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/rectangle2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.199" />
-
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/rectangle"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.152" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SOP"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.196"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.153" />
-
-    <ImageView
-        android:id="@+id/imageView18"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
-        android:src="@drawable/minimize"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.831"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.133" />
-
-
-    <ImageView
-        android:id="@+id/imageView26"
-        android:layout_width="186dp"
-        android:layout_height="82dp"
-        android:layout_marginTop="172dp"
-        android:src="@drawable/img_5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/imageButton22"
-        android:layout_width="90dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="212dp"
-        android:src="@drawable/button_upload"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.641"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="80dp"
-        android:layout_height="18dp"
-        android:layout_gravity="bottom"
-        android:layout_marginTop="220dp"
-        android:gravity="center"
-        android:text="Choose File"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        android:textStyle=""
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.631"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pengajuan SR"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

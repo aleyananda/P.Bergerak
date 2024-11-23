@@ -8,12 +8,24 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.myapplication.databinding.LayoutHomeBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class HomeActivity : AppCompatActivity() {
+    private lateinit var binding: LayoutHomeBinding
+    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.layout_home)
+        binding = LayoutHomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        auth = FirebaseAuth.getInstance()
+        binding.Logoutbutton.setOnClickListener {
+            auth.signOut()
+            Intent(this@HomeActivity, MainActivity::class.java).also {
+                it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(it)
+            }
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.home)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -24,12 +36,6 @@ class HomeActivity : AppCompatActivity() {
         hometoedit.setOnClickListener {
             // Membuat intent untuk berpindah ke edit
             val intent = Intent(this, editprofile::class.java)
-            startActivity(intent)
-        }
-        val logout: ImageButton = findViewById(R.id.Logoutbutton)
-        logout.setOnClickListener {
-            // Intent to open HomeActivity
-            val intent = Intent(this@HomeActivity, MainActivity::class.java)
             startActivity(intent)
         }
         val hometosr: ImageButton = findViewById(R.id.srbutton)

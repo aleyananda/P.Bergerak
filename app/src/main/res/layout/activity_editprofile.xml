@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/edit"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".editprofile">
@@ -48,7 +48,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.466"
                 app:srcCompat="@drawable/_button_core"
-                android:contentDescription="Kembali" />
+                android:contentDescription="@string/back" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -239,98 +239,6 @@
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="wrap_content"
-        android:layout_height="79dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="787dp"
-        android:layout_marginBottom="0dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginBottom="0dp"
-            android:backgroundTint="#ffffff"
-            android:drawableTop="@drawable/home_button"
-            android:drawableTint="#8C8994"
-            android:text="Beranda"
-            android:textColor="#000000"
-            tools:layout_editor_absoluteX="-7dp"
-            tools:layout_editor_absoluteY="805dp" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="-20dp"
-            android:layout_marginBottom="0dp"
-            android:backgroundTint="#ffffff"
-            android:drawableTop="@drawable/stoke"
-            android:drawableTint="#8C8994"
-            android:text="Lainnya"
-            android:textColor="#000000"
-            tools:layout_editor_absoluteX="70dp"
-            tools:layout_editor_absoluteY="805dp" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="-20dp"
-            android:layout_marginBottom="0dp"
-            android:backgroundTint="#ffffff"
-            android:drawableTop="@drawable/mortarboard_alt_light"
-            android:drawableTint="#8C8994"
-            android:text="Akademik"
-            android:textColor="#000000"
-            tools:layout_editor_absoluteX="149dp"
-            tools:layout_editor_absoluteY="805dp" />
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="-20dp"
-            android:layout_marginBottom="0dp"
-            android:backgroundTint="#ffffff"
-            android:drawableTop="@drawable/pesan"
-            android:drawableTint="#8C8994"
-            android:text="Pesan"
-            android:textColor="#000000"
-            tools:layout_editor_absoluteX="249dp"
-            tools:layout_editor_absoluteY="809dp" />
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="-20dp"
-            android:layout_marginBottom="0dp"
-            android:backgroundTint="#ffffff"
-            android:drawableTop="@drawable/user_cicrle_duotone_line"
-            android:drawableTint="#8C8994"
-            android:text="Akun"
-            android:textColor="#000000"
-            tools:layout_editor_absoluteX="322dp"
-            tools:layout_editor_absoluteY="805dp" />
 
     </LinearLayout>
 

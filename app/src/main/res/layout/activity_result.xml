@@ -2,101 +2,63 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/result"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Result">
 
-    <Button
-        android:id="@+id/btn_home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#ffffff"
-        android:drawableTop="@drawable/home_button"
-        android:drawableTint="#8C8994"
-        android:text="Beranda"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <!--LinearLayout: Toolbar-->
+    <LinearLayout
+        android:id="@+id/linearLayoutEP"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/btn_lainnya"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#ffffff"
-        android:drawableTop="@drawable/stoke"
-        android:drawableTint="#8C8994"
-        android:text="Lainnya"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.236"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
+            android:background="#FFFFFF">
 
-    <Button
-        android:id="@+id/btn_akademik"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#ffffff"
-        android:drawableTop="@drawable/mortarboard_alt_light"
-        android:drawableTint="#8C8994"
-        android:text="Akademik"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+            <TextView
+                android:id="@+id/EditProfilTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hasil SPTJM SR"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.511" />
 
-    <Button
-        android:id="@+id/btn_pesan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#ffffff"
-        android:drawableTop="@drawable/pesan"
-        android:drawableTint="#8C8994"
-        android:text="Pesan"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.749"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+            <ImageButton
+                android:id="@+id/imgbtn_home"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#FEFEFE"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.043"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.466"
+                app:srcCompat="@drawable/_button_core"
+                android:contentDescription="@string/back" />
 
-    <Button
-        android:id="@+id/btn_akun"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#ffffff"
-        android:drawableTop="@drawable/user_cicrle_duotone_line"
-        android:drawableTint="#8C8994"
-        android:text="Akun"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.996"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
 
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="413dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/screenshot_2024_10_13_161725" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="?android:attr/listDivider" />
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView12"
@@ -107,35 +69,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11"
-        app:layout_constraintVertical_bias="0.6"
+        app:layout_constraintTop_toTopOf="@+id/linearLayoutEP"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/open_hasilsptjm" />
 
     <ImageView
         android:id="@+id/imageView16"
         android:layout_width="318dp"
         android:layout_height="216dp"
-        android:layout_marginTop="276dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11"
-        app:layout_constraintVertical_bias="0.63"
-        app:srcCompat="@drawable/open_hasilsr" />
+        app:srcCompat="@drawable/open_hasilsr"
+        tools:layout_editor_absoluteY="369dp" />
 
-    <ImageButton
-        android:id="@+id/imgbtn_home"
-        android:layout_width="79dp"
-        android:layout_height="61dp"
-        android:background="#FFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView11"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/_button_core"
-        android:contentDescription="Kembali" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
