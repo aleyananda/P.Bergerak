@@ -61,11 +61,11 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/imageViewR1"
         android:layout_width="319dp"
         android:layout_height="215dp"
         android:layout_marginBottom="38dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView16"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewR2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,12 +74,14 @@
         app:srcCompat="@drawable/open_hasilsptjm" />
 
     <ImageView
-        android:id="@+id/imageView16"
+        android:id="@+id/imageViewR2"
         android:layout_width="318dp"
         android:layout_height="216dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewR1"
         app:srcCompat="@drawable/open_hasilsr"
         tools:layout_editor_absoluteY="369dp" />
 

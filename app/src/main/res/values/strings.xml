@@ -2,5 +2,10 @@
     <string name="app_name">MyApplication</string>
     <string name="item_label">Semester</string>
     <string name="back">Kembali</string>
+    <string name="logout">Logout</string>
+    <string name="sr">SR</string>
+    <string name="sptjm">SPTJM</string>
+    <string name="result">Result</string>
+    <string name="template">Template</string>
 
 </resources>
