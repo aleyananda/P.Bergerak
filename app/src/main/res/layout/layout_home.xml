@@ -84,7 +84,7 @@
                 android:id="@+id/fileNameEdit1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No file chosen"
+                android:text="Nama:"
                 android:textColor="#3470A2"
                 android:textStyle="bold"
                 android:textSize="12sp"
@@ -96,7 +96,7 @@
                 android:id="@+id/fileNameEdit2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No file chosen"
+                android:text="Nim:"
                 android:textColor="#3470A2"
                 android:textStyle="bold"
                 android:textSize="12sp"
@@ -108,7 +108,7 @@
                 android:id="@+id/fileNameEdit3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No file chosen"
+                android:text="Jurusan:"
                 android:textColor="#3470A2"
                 android:textStyle="bold"
                 android:textSize="12sp"
@@ -120,7 +120,7 @@
                 android:id="@+id/fileNameEdit4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No file chosen"
+                android:text="Angkatan:"
                 android:textColor="#3470A2"
                 android:textStyle="bold"
                 android:textSize="12sp"
@@ -132,7 +132,7 @@
                 android:id="@+id/fileNameEdit5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No file chosen"
+                android:text="Semester:"
                 android:textColor="#3470A2"
                 android:textStyle="bold"
                 android:textSize="12sp"
@@ -229,12 +229,12 @@
             <ImageView
                 android:id="@+id/imageView20"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="100dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/img9" />
+                app:srcCompat="@drawable/img" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>

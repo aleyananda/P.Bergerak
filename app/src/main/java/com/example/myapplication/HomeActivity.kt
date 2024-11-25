@@ -62,7 +62,7 @@ class HomeActivity : AppCompatActivity() {
                             nimTextView.text = "NIM: ${user.nim}"
                             jurusanTextView.text = "Jurusan: ${user.jurusan}"
                             angkatanTextView.text = "Angkatan: ${user.angkatan}"
-                            semesterTextView.text = "Semester: ${user.semester}"
+                            semesterTextView.text = "${user.semester}"
 
                             // Set image URL menggunakan Glide
                             user.profileImageUrl?.let { imageUrl ->
