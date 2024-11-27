@@ -1,21 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/result"
     android:layout_width="match_parent"
+    android:id="@+id/result"
     android:layout_height="match_parent"
     tools:context=".Result">
 
-    <!--LinearLayout: Toolbar-->
+    <!-- Bagian atas yang tetap -->
     <LinearLayout
-        android:id="@+id/linearLayoutEP"
+        android:id="@+id/linearLayoutEPR"
         android:layout_width="match_parent"
         android:layout_height="79dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -23,7 +20,7 @@
             android:background="#FFFFFF">
 
             <TextView
-                android:id="@+id/EditProfilTV"
+                android:id="@+id/EditProfilTVR"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hasil SPTJM SR"
@@ -40,63 +37,206 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:background="#FEFEFE"
+                android:contentDescription="@string/back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.043"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.466"
-                app:srcCompat="@drawable/_button_core"
-                android:contentDescription="@string/back" />
-
+                app:srcCompat="@drawable/_button_core" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
-            android:id="@+id/divider5"
+            android:id="@+id/dividerResult"
             android:layout_width="match_parent"
             android:layout_height="3dp"
             android:background="?android:attr/listDivider" />
-
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageViewR1"
-        android:layout_width="319dp"
-        android:layout_height="215dp"
-        android:layout_marginBottom="38dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageViewR2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayoutEP"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/open_hasilsptjm" />
+    <!-- Bagian konten yang dapat di-scroll -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        android:layout_marginTop="150dp"> <!-- Tambahkan marginTop agar tidak menutupi bagian tetap -->
 
-    <ImageView
-        android:id="@+id/imageViewR2"
-        android:layout_width="318dp"
-        android:layout_height="216dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewR1"
-        app:srcCompat="@drawable/open_hasilsr"
-        tools:layout_editor_absoluteY="369dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.048661802" />
+                <ImageView
+                    android:id="@+id/imageView1blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rectangle"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView1white"
+                    app:layout_constraintEnd_toEndOf="@id/guideline3R"
+                    app:layout_constraintStart_toStartOf="@id/guideline2R"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
 
-    <androidx.constraintlayout.widget.Group
-        android:id="@+id/group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/textView1blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hasil SPTJM"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView1blue"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView1blue"
+                    app:layout_constraintHorizontal_bias="0.095"
+                    app:layout_constraintStart_toStartOf="@+id/imageView1blue"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView1blue"
+                    app:layout_constraintVertical_bias="0.5" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <ImageView
+                    android:id="@+id/imageView1white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rectangle4"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView2blue"
+                    app:layout_constraintEnd_toEndOf="@id/guideline3R"
+                    app:layout_constraintStart_toStartOf="@id/guideline2R"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView1blue"
+                    app:layout_constraintTop_toTopOf="@+id/imageView1blue" />
 
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/uploadBtnYellow1"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="98dp"
+                    android:layout_height="52dp"
+                    android:backgroundTint="@color/yellow"
+                    android:elevation="8dp"
+                    android:text="Download"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView1white"
+                    app:layout_constraintStart_toStartOf="@id/guideline4R"
+                    app:layout_constraintEnd_toEndOf="@+id/guideline3R"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView1white"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/fileName1bold"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="24dp"
+                    android:text="SPTJM - Pengajuan MSIB"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView1white"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView1white"
+                    app:layout_constraintEnd_toStartOf="@id/guideline4R"
+                    app:layout_constraintStart_toStartOf="@+id/imageView1white"
+                    app:layout_constraintHorizontal_bias="0.1"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <ImageView
+                    android:id="@+id/imageView2blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rectangle"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView2white"
+                    app:layout_constraintEnd_toEndOf="@id/guideline3R"
+                    app:layout_constraintStart_toStartOf="@id/guideline2R"
+                    app:layout_constraintTop_toBottomOf="@id/imageView1white"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2white" />
+
+                <TextView
+                    android:id="@+id/textView2blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hasil SR"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView2blue"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView2blue"
+                    app:layout_constraintHorizontal_bias="0.095"
+                    app:layout_constraintStart_toStartOf="@+id/imageView2blue"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2blue"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <ImageView
+                    android:id="@+id/imageView2white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rectangle4"
+                    android:layout_marginBottom="40dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/guideline3R"
+                    app:layout_constraintStart_toStartOf="@id/guideline2R"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2blue" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/uploadBtnYellow2"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="98dp"
+                    android:layout_height="52dp"
+                    android:layout_marginBottom="2dp"
+                    android:backgroundTint="@color/yellow"
+                    android:elevation="8dp"
+                    android:text="Download"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView2white"
+                    app:layout_constraintStart_toStartOf="@id/guideline4R"
+                    app:layout_constraintEnd_toEndOf="@+id/guideline3R"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2white"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/fileName2bold"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="24dp"
+                    android:text="SR - Pengajuan MSIB"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/imageView2white"
+                    app:layout_constraintEnd_toStartOf="@id/guideline4R"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2white"
+                    app:layout_constraintStart_toStartOf="@+id/imageView2white"
+                    app:layout_constraintHorizontal_bias="0.1"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2R"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="49dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline3R"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.88" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline4R"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="246dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

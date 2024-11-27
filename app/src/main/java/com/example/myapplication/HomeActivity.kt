@@ -129,6 +129,13 @@ class HomeActivity : AppCompatActivity() {
                 val intent = Intent(this@HomeActivity, Result::class.java)
                 startActivity(intent)
             }
+            val hometopetunjuk: ImageButton = findViewById(R.id.petunjuk)
+            hometopetunjuk.setOnClickListener {
+                // Intent to open HomeActivity
+                val intent = Intent(this@HomeActivity, Petunjuk::class.java)
+                startActivity(intent)
+            }
+
         }
     }
 
