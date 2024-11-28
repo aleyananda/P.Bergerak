@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import android.widget.Button
 import com.example.myapplication.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -32,20 +33,13 @@ class Register : AppCompatActivity() {
             if (email.isNotEmpty() && pass.isNotEmpty() && confirmPass.isNotEmpty()) {
                 if (pass == confirmPass) {
 
-                    firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener { task ->
-                        if (task.isSuccessful) {
-                            // Kirim email verifikasi
-                            firebaseAuth.currentUser?.sendEmailVerification()?.addOnCompleteListener { emailTask ->
-                                if (emailTask.isSuccessful) {
-                                    Toast.makeText(this, "Verification email sent! Please check your inbox.", Toast.LENGTH_SHORT).show()
-                                    val intent = Intent(this, MainActivity::class.java)
-                                    startActivity(intent)
-                                } else {
-                                    Toast.makeText(this, emailTask.exception?.message, Toast.LENGTH_SHORT).show()
-                                }
-                            }
+                    firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener {
+                        if (it.isSuccessful) {
+                            val intent = Intent(this, MainActivity::class.java)
+                            startActivity(intent)
                         } else {
-                            Toast.makeText(this, task.exception?.message, Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+
                         }
                     }
                 } else {
@@ -53,6 +47,7 @@ class Register : AppCompatActivity() {
                 }
             } else {
                 Toast.makeText(this, "Empty Fields Are not Allowed !!", Toast.LENGTH_SHORT).show()
+
             }
         }
     }
