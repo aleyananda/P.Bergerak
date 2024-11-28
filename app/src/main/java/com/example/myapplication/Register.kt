@@ -26,9 +26,9 @@ class Register : AppCompatActivity() {
             startActivity(intent)
         }
         binding.RegisterButton.setOnClickListener {
-            val email = binding.emailEt.text.toString()
-            val pass = binding.passwordEt.text.toString()
-            val confirmPass = binding.confirmPassEt.text.toString()
+            val email = binding.emailRegister.text.toString()
+            val pass = binding.passET1.text.toString()
+            val confirmPass = binding.passET2.text.toString()
 
             if (email.isNotEmpty() && pass.isNotEmpty() && confirmPass.isNotEmpty()) {
                 if (pass == confirmPass) {

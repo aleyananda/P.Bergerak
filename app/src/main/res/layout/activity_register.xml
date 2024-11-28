@@ -22,6 +22,7 @@
             android:layout_height="wrap_content"
             android:text="REGISTER"
             android:textStyle="bold"
+            android:textColor="@color/black"
             android:textSize="30dp"
             android:textAlignment="center"/>
 
@@ -32,47 +33,62 @@
             android:layout_height="98dp"
             app:srcCompat="@drawable/logo_msib" />
 
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:background="@drawable/rounded_corner"
-            android:backgroundTint="#FFFFFF"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:padding="18dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:textSize="20sp" />
+            app:hintTextColor="@color/black">
 
-        <EditText
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner"
+                android:hint="Email"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/passwordEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:background="@drawable/rounded_corner"
-            android:backgroundTint="#FFFFFF"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="18dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:textSize="20sp" />
+            app:hintTextColor="@color/black"
+            app:passwordToggleEnabled="true">  <!-- Enable the show/hide toggle -->
 
-        <EditText
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passET1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner"
+                android:hint="Password"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/confirmPassEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:background="@drawable/rounded_corner"
-            android:backgroundTint="#FFFFFF"
-            android:hint="Confirm Password"
-            android:inputType="textPassword"
-            android:padding="18dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:textSize="20sp" />
+            app:hintTextColor="@color/black"
+            app:passwordToggleEnabled="true">  <!-- Enable the show/hide toggle -->
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passET2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner"
+                android:hint="Confirm Password"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
 
 
         <Button

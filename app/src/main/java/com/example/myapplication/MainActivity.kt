@@ -25,8 +25,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.loginButton.setOnClickListener {
-            val email = binding.emailInput.text.toString()
-            val pass = binding.passwordInput.text.toString()
+            val email = binding.emailLogin.text.toString()
+            val pass = binding.passETLogin.text.toString()
 
             if (email.isNotEmpty() && pass.isNotEmpty()) {
 

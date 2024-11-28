@@ -23,6 +23,7 @@ class HomeActivity : AppCompatActivity() {
 
     private lateinit var databaseReference: DatabaseReference
     private lateinit var auth: FirebaseAuth
+    private lateinit var userListener: ValueEventListener
 
     private lateinit var nameTextView: TextView
     private lateinit var nimTextView: TextView
@@ -53,7 +54,7 @@ class HomeActivity : AppCompatActivity() {
 
         // Memeriksa apakah uid valid
         if (uid != null) {
-            databaseReference.child(uid).addValueEventListener(object : ValueEventListener {
+            userListener = object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if (snapshot.exists()) {
                         val user = snapshot.getValue(User::class.java)
@@ -71,28 +72,29 @@ class HomeActivity : AppCompatActivity() {
                                     .into(profileImageView)
                             }
                         }
-
                     } else {
                         Toast.makeText(this@HomeActivity, "No data available", Toast.LENGTH_SHORT).show()
                     }
-
                 }
 
                 override fun onCancelled(error: DatabaseError) {
                     Toast.makeText(this@HomeActivity, "Failed to read data", Toast.LENGTH_SHORT)
                         .show()
                 }
-            })
+            }
+            databaseReference.child(uid).addValueEventListener(userListener)
         }
 
-
-            binding.Logoutbutton.setOnClickListener {
-                auth.signOut()
-                Intent(this@HomeActivity, MainActivity::class.java).also {
-                    it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    startActivity(it)
-                }
+        binding.Logoutbutton.setOnClickListener {
+            if (::userListener.isInitialized) {
+                databaseReference.child(auth.currentUser?.uid ?: "").removeEventListener(userListener)
             }
+            auth.signOut()
+            Intent(this@HomeActivity, MainActivity::class.java).also {
+                it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(it)
+            }
+        }
 
             ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.home)) { v, insets ->
                 val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -135,9 +137,15 @@ class HomeActivity : AppCompatActivity() {
                 val intent = Intent(this@HomeActivity, Petunjuk::class.java)
                 startActivity(intent)
             }
-
+        }
+        override fun onDestroy() {
+            super.onDestroy()
+            if (::userListener.isInitialized) {
+                databaseReference.child(auth.currentUser?.uid ?: "").removeEventListener(userListener)
         }
     }
+}
+
 
 
 
